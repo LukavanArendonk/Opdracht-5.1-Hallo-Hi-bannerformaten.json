@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e8e8e8;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.stage {
+    position: relative;
+    cursor: pointer;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.bannerSize {
+    background-color: #ffe45c;
+}
+
+/* de drie formaten */
+.b300x250 {
+    width: 300px;
+    height: 250px;
+}
+
+.b300x600 {
+    width: 300px;
+    height: 600px;
+}
+
+.b970x250 {
+    width: 970px;
+    height: 250px;
+}
+
+.logo {
+    position: absolute;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #1b1b3a;
+    animation: vanLinks 0.7s ease-out 0.1s backwards;
+}
+
+.titel {
+    position: absolute;
+    color: #1b1b3a;
+    animation: vanLinks 0.7s ease-out 0.5s backwards;
+}
+
+.tekst {
+    position: absolute;
+    color: #1b1b3a;
+    animation: vanLinks 0.7s ease-out 0.7s backwards;
+}
+
+.button {
+    position: absolute;
+    background-color: #1b1b3a;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 24px;
+    transition: transform 0.3s ease;
+    animation: vanOnder 0.7s ease-out 0.9s backwards;
+}
+
+.button:hover {
+    transform: scale(1.15);
+}
+
+.rondje {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #4a90e2;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: vanRechts 0.7s ease-out 0.3s backwards;
+}
+
+.sticker {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ff3b30;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pop 0.6s ease-out 1.1s backwards;
+}
+
+.b300x250 .logo {
+    top: 16px;
+    left: 16px;
+    font-size: 14px;
+}
+
+.b300x250 .titel {
+    top: 60px;
+    left: 16px;
+    width: 150px;
+    font-size: 26px;
+    line-height: 1.05;
+}
+
+.b300x250 .tekst {
+    top: 136px;
+    left: 16px;
+    width: 150px;
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+.b300x250 .button {
+    left: 16px;
+    bottom: 18px;
+    padding: 9px 18px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+.b300x250 .rondje {
+    top: 76px;
+    right: 14px;
+    width: 110px;
+    height: 110px;
+    font-size: 46px;
+}
+
+.b300x250 .sticker {
+    top: 12px;
+    right: 12px;
+    width: 62px;
+    height: 62px;
+    font-size: 11px;
+}
+
+.b300x600 .logo {
+    top: 28px;
+    left: 28px;
+    font-size: 16px;
+}
+
+.b300x600 .titel {
+    top: 350px;
+    left: 28px;
+    width: 244px;
+    font-size: 36px;
+    line-height: 1.1;
+}
+
+.b300x600 .tekst {
+    top: 450px;
+    left: 28px;
+    width: 244px;
+    font-size: 15px;
+    line-height: 1.35;
+}
+
+.b300x600 .button {
+    left: 28px;
+    bottom: 45px;
+    padding: 12px 24px;
+    font-size: 14px;
+}
+
+.b300x600 .rondje {
+    top: 140px;
+    left: 60px;
+    width: 180px;
+    height: 180px;
+    font-size: 72px;
+}
+
+.b300x600 .sticker {
+    top: 24px;
+    right: 24px;
+    width: 72px;
+    height: 72px;
+    font-size: 12px;
+}
+
+.b970x250 .logo {
+    top: 22px;
+    left: 30px;
+    font-size: 16px;
+}
+
+.b970x250 .titel {
+    top: 66px;
+    left: 30px;
+    width: 460px;
+    font-size: 40px;
+    line-height: 1.1;
+}
+
+.b970x250 .tekst {
+    top: 126px;
+    left: 30px;
+    width: 400px;
+    font-size: 15px;
+    line-height: 1.35;
+}
+
+.b970x250 .button {
+    left: 30px;
+    bottom: 32px;
+    padding: 12px 24px;
+    font-size: 14px;
+}
+
+.b970x250 .rondje {
+    top: 35px;
+    right: 170px;
+    width: 180px;
+    height: 180px;
+    font-size: 72px;
+}
+
+.b970x250 .sticker {
+    top: 24px;
+    right: 24px;
+    width: 78px;
+    height: 78px;
+    font-size: 12px;
+}
+
+@keyframes vanLinks {
+    from {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes vanRechts {
+    from {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes vanOnder {
+    from {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
